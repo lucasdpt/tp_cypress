@@ -7,7 +7,9 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "serve": "json-server db.json",
-    "dev": "concurrently \"npm run watch\" \"npm run serve\""
+    "dev": "concurrently \"npm run watch\" \"npm run serve\"",
+    "cypress:run": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:3030 cypress:run"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +31,7 @@
     "css-loader": "0.28.11",
     "cypress": "^14.4.1",
     "html-webpack-plugin": "2.30.1",
+    "start-server-and-test": "^2.0.12",
     "style-loader": "0.19.1",
     "webpack": "3.12.0"
   }
