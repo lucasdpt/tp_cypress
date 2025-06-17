@@ -2,7 +2,7 @@
   "todos": [
     {
       "name": "Ajouter Cypress au projet",
-      "isComplete": false,
+      "isComplete": true,
       "id": 1
     },
     {
@@ -24,6 +24,31 @@
       "name": "Passer le projet en CI/CD",
       "isComplete": false,
       "id": 5
+    },
+    {
+      "name": "Acheter du lait",
+      "isComplete": false,
+      "id": 6
+    },
+    {
+      "name": "Buy a lot of beers",
+      "isComplete": false,
+      "id": 7
+    },
+    {
+      "name": "Buy a lot of beers",
+      "isComplete": false,
+      "id": 8
+    },
+    {
+      "name": "Buy a lot of beers",
+      "isComplete": false,
+      "id": 9
+    },
+    {
+      "name": "Buy a lot of beers",
+      "isComplete": false,
+      "id": 10
     }
   ]
 }
