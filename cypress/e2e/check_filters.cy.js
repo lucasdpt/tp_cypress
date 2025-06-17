@@ -20,18 +20,21 @@ describe('Check filter task\'s', () => {
 
     it('Filter : All / "Tous" ', () => {
         cy.contains('Tous').click()
+        cy.wait(500)
         cy.contains(task1).should('exist')
         cy.contains(task2).should('exist')
     })
 
     it('Filter : not completed / "En cours" ', () => {
-        cy.contains('Fait').click()
-        cy.contains(task1).should('not.exist')
-        cy.contains(task2).should('exist')
+        cy.contains('En cours').click()
+        cy.wait(500)
+        cy.contains(task1).should('exist')
+        cy.contains(task2).should('not.exist')
     })
 
     it('Filter : completed / "Fait"', () => {
         cy.contains('Fait').click()
+        cy.wait(500)
         cy.contains(task1).should('not.exist')
         cy.contains(task2).should('exist')
     })
