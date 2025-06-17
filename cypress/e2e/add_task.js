@@ -7,7 +7,6 @@ describe('Add new task', () => {
 
     it('Add new task', () => {
         cy.get('.new-todo').type(`${newtask}{enter}`);
-        cy.contains('Ajouter').click();
         cy.contains(newtask).should('exist');
     });
 });

@@ -48,5 +48,4 @@ Cypress.Commands.add('resetDb', () => {
             .type(task)
             .type('{enter}')
     })
-
 })

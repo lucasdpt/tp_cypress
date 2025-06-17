@@ -1,10 +1,10 @@
 describe('Delete task', () => {
-    const tache = 'Wash the puppy';
+    const task = 'Wash the puppy';
 
     beforeEach(() => {
         cy.visit('http://localhost:3030');
-        cy.get('.new-todo').type(`${tache}{enter}`);
-        cy.contains(tache).should('exist');
+        cy.get('.new-todo').type(`${task}{enter}`);
+        cy.contains(task).should('exist');
     });
 
     afterEach(() => {
@@ -13,11 +13,11 @@ describe('Delete task', () => {
 
     // Sorry for my approximative english, I'm not a native speacker so please be cool :D
     it('Delete the task created just few moments ago', () => {
-        cy.contains(tache)
+        cy.contains(task)
             .parent()
             .find('.destroy')
             .invoke('show')
             .click();
-        cy.contains(tache).should('not.exist');
+        cy.contains(task).should('not.exist');
     });
 });

@@ -4,7 +4,7 @@ describe('Page d\'accueil', () => {
     });
 
     it('Affiche la page d\'accueil', () => {
-        cy.contains('Ajouter').should('exist');
+        cy.contains('todos').should('exist');
     });
 
 });
