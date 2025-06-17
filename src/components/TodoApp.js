@@ -27,11 +27,6 @@ export default class TodoApp extends Component {
   }
   
   handleNewTodoChange(evt) {
-	// Check if input value already exists in the todos
-	if (this.state.todos.some(todo => todo.name === evt.target.value)) {
-		this.setState({error: true})
-		return
-	}
 	  this.setState({currentTodo: evt.target.value})
   }
   
