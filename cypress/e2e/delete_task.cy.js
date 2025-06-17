@@ -7,6 +7,10 @@ describe('Delete task', () => {
         cy.contains(tache).should('exist');
     });
 
+    afterEach(() => {
+        cy.resetDb();
+    });
+
     // Sorry for my approximative english, I'm not a native speacker so please be cool :D
     it('Delete the task created just few moments ago', () => {
         cy.contains(tache)

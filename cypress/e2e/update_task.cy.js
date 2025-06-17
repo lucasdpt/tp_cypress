@@ -7,6 +7,10 @@ describe('Update task', () => {
         cy.contains(tache).should('exist');
     });
 
+    afterEach(() => {
+        cy.resetDb();
+    });
+
     it('To see that the task is end', () => {
         cy.contains(tache)
             .parent()

@@ -14,6 +14,10 @@ describe('Check filter task\'s', () => {
         cy.contains('Tous').click()
     })
 
+    afterEach(() => {
+        cy.resetDb();
+    });
+
     it('Filter : All / "Tous" ', () => {
         cy.contains('Tous').click()
         cy.contains(task1).should('exist')
