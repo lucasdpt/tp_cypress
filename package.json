@@ -15,6 +15,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "@cypress/browserify-preprocessor": "^3.0.2",
     "axios": "0.19.2",
     "concurrently": "3.6.1",
     "json-server": "0.16.1",
