@@ -2,7 +2,7 @@
   "todos": [
     {
       "name": "Ajouter Cypress au projet",
-      "isComplete": true,
+      "isComplete": false,
       "id": 1
     },
     {
@@ -49,6 +49,11 @@
       "name": "Buy a lot of beers",
       "isComplete": false,
       "id": 10
+    },
+    {
+      "name": "Buy a lot of beers",
+      "isComplete": false,
+      "id": 11
     }
   ]
 }
