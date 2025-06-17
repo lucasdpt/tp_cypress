@@ -8,9 +8,13 @@ describe('Check counter of not completed tasks', () => {
         cy.get('.new-todo').type(`${task2}{enter}`)
     })
 
+    afterEach(() => {
+        cy.resetDb()
+    })
+
     it('Check counter of tasks', () => {
         cy.get('.todo-count')
-            .should('contain', '1')
+            .should('contain', '7')
     })
 
     it('Update counter after check a task', () => {
@@ -20,12 +24,12 @@ describe('Check counter of not completed tasks', () => {
             .check({ force: true })
 
         cy.get('.todo-count')
-            .should('contain', '1')
+            .should('contain', '6')
     })
 
     it('Update counter after add a new task', () => {
         cy.get('.new-todo').type(`Watch the Lord of the Rings (in long version){enter}`)
         cy.get('.todo-count')
-            .should('contain', '1')
+            .should('contain', '8')
     })
 })
