@@ -23,3 +23,30 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('resetDb', () => {
+    cy.visit('http://localhost:3030')
+
+    cy.get('.todo-list li')
+        .each($el => {
+            cy.wrap($el)
+                .find('.destroy')
+                .invoke('show')
+                .click()
+        })
+    
+    const tasks = [
+        "Ajouter Cypress au projet",
+        "Identifier tous les cas à tester",
+        "Implémenter les tests",
+        "Mise en place de Gherkin (pour les courageux)",
+        "Passer le projet en CI/CD"
+    ]
+
+    tasks.forEach(task => {
+        cy.get('.new-todo')
+            .type(task)
+            .type('{enter}')
+    })
+
+})
