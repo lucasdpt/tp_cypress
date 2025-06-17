@@ -54,6 +54,16 @@
       "name": "Buy a lot of beers",
       "isComplete": false,
       "id": 11
+    },
+    {
+      "name": "Play video games a lot a lot a lot, during all the night",
+      "isComplete": true,
+      "id": 12
+    },
+    {
+      "name": "Play video games a lot a lot a lot, during all the night",
+      "isComplete": false,
+      "id": 13
     }
   ]
 }
